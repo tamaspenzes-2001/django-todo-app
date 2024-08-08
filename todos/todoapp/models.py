@@ -5,7 +5,7 @@ class TodoList(models.Model):
   title = models.CharField(max_length=20)
 
   def get_absolute_url(self):
-    return "/lists"
+    return "/"
 
   def str(self):
     return self.title
