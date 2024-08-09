@@ -1,0 +1,20 @@
+{% extends "todoapp/base.html" %}
+
+{% load static %}
+
+{% block head %}
+<title>Create list</title>
+<link rel="stylesheet" href="{% static 'todoapp/style.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1 class="title">Delete list: {{ todolist.title }}</h1>
+<p>
+  Are you sure you want to delete {{ todolist.title }}?
+  All todos inside this list will be lost!
+</p>
+<form action="" method="POST">
+  {% csrf_token %}
+  <input type="submit" value="Delete">
+</form>
+{% endblock %}

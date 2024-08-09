@@ -17,3 +17,8 @@ class TodoListUpdate(UpdateView):
   model = TodoList
   form_class = TodoListForm
   template_name = "todoapp/todo-list-update.html"
+
+class TodoListDelete(DeleteView):
+  model = TodoList
+  template_name = "todoapp/todo-list-delete.html"
+  success_url = "/"
