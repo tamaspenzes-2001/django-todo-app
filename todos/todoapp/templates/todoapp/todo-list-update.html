@@ -1,0 +1,17 @@
+{% extends "todoapp/base.html" %}
+
+{% load static %}
+
+{% block head %}
+<title>Update list</title>
+<link rel="stylesheet" href="{% static 'todoapp/style.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1 class="title">Update list</h1>
+<form action="" method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Save">
+</form>
+{% endblock %}

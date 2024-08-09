@@ -13,3 +13,7 @@ class TodoListCreate(CreateView):
   form_class = TodoListForm
   template_name = "todoapp/todo-list-create.html"
 
+class TodoListUpdate(UpdateView):
+  model = TodoList
+  form_class = TodoListForm
+  template_name = "todoapp/todo-list-update.html"
